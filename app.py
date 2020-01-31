@@ -56,7 +56,7 @@ def upload_file():
                 print(res)
                 data["predictions"] = []
                 #loop over the results and add to returned predictions
-                for (imagenetID, label, prob) in results[0]:
+                for (imagenetID, label, prob) in res[0]:
                     r = {"label": label, "probability": float(prob)}
                     data["predictions"].append(r)
                 #store boolean for process success
